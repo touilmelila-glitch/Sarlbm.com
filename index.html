@@ -1,107 +1,63 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SARL BMBM - Import et Distribution de Pièces Automobiles</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Automotive Parts Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">SARL BMBM</div>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#localisation">Localisation</a></li>
+    <header>
+        <img src="logo.png" alt="Company Logo" style="position:absolute; top: 10px; left: 10px; width: 100px;">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="accueil" class="hero">
-        <div class="container">
-            <h1>SARL BMBM</h1>
-            <p>Import et Distribution de Pièces Automobiles</p>
-            <p class="subtitle">Livraison dans les 69 Wilayas de l'Algérie</p>
-        </div>
-    </section>
-
-    <!-- À Propos -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <h2>À Propos de Nous</h2>
-            <p>SARL BMBM est une entreprise spécialisée dans l'import et la distribution de pièces de rechange automobiles. Avec une couverture nationale dans les 69 wilayas, nous fournissons les meilleurs produits avec un service irréprochable.</p>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Nos Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>📦 Distribution Nationale</h3>
-                    <p>Livraison rapide dans les 69 wilayas d'Algérie</p>
-                </div>
-                <div class="service-card">
-                    <h3>🚗 Pièces de Qualité</h3>
-                    <p>Sélection des meilleures pièces automobiles</p>
-                </div>
-                <div class="service-card">
-                    <h3>⏰ Disponibilité</h3>
-                    <p>Ouvert du samedi au jeudi de 8h à 17h</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Localisation -->
-    <section id="localisation" class="location">
-        <div class="container">
-            <h2>Notre Localisation</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.4131684693433!2d3.040892515032983!3d36.74634067999349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1284c10665447fb9%3A0xecf7e1c6cb7b3918!2z2KfYqNiq2LXYutmF2KfZhdmF8xI0g7Imc2RTbN9Tq2Kog2LXYp9mE2LHZhCDYpyB2L4jYTWZ!5e0!3m2!1sen!2sdz!4v1587918330998!5m2!1sen!2sdz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <p style="text-align:center; margin-top:20px;">
-                <a href="https://maps.app.goo.gl/7Swd9ERhaLQU8cmFA?g_st=com.google.maps.preview.copy" target="_blank" class="btn-maps">📍 Voir sur Google Maps</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contactez-Nous</h2>
-            <div class="contact-container">
-                <form class="contact-form" id="contactForm">
-                    <input type="text" id="nom" placeholder="Votre Nom" required>
-                    <input type="email" id="email" placeholder="Votre Email" required>
-                    <input type="tel" id="telephone" placeholder="Votre Téléphone" required>
-                    <textarea id="message" placeholder="Votre Message" rows="5" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
-                <div class="contact-info">
-                    <h3>Informations de Contact</h3>
-                    <p><strong>📍 Adresse :</strong><br>Hamiz Dar El Beida, Alger, Algérie</p>
-                    <p><strong>📞 Téléphone :</strong><br><a href="tel:+213553646506">+213 553 64 65 06</a></p>
-                    <p><strong>📧 Email :</strong><br><a href="mailto:touil.melila@gmail.com">touil.melila@gmail.com</a></p>
-                    <p><strong>⏰ Horaires :</strong><br>Samedi - Jeudi : 08h00 - 17h00<br>Fermé le vendredi</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Our Automotive Parts Store</h1>
+            <p>Your one-stop shop for all automotive parts.</p>
+        </section>
+        <section id="map">
+            <h2>Find Us Here</h2>
+            <div id="google-map" style="width: 100%; height: 400px;"></div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2026 SARL BMBM. Tous droits réservés.</p>
-        </div>
+        <p>&copy; 2026 Automotive Parts Co.</p>
     </footer>
-
-    <script src="script.js"></script>
+    <script>
+        function initMap() {
+            const location = { lat: -34.397, lng: 150.644 };
+            const map = new google.maps.Map(document.getElementById("google-map"), {
+                zoom: 8,
+                center: location,
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
 </body>
 </html>
