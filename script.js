@@ -69,3 +69,14 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transition = 'all 0.6s ease';
     observer.observe(section);
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelector(".apropos-slider .slides");
+  const imgs = document.querySelectorAll(".apropos-slider img");
+  if (!slides || imgs.length === 0) return;
+
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % imgs.length;
+    slides.style.transform = `translateX(-${i * 100}%)`;
+  }, 2500);
+});
